@@ -1,0 +1,218 @@
+* {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', "Tahoma", "Geneva", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+html {
+    background-color: rgb(59, 53, 70);
+}
+
+/*
+body {
+    opacity: 0.5;
+    background: linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 1));
+}*/
+
+.header {
+    background-color: rgb(33, 33, 33);
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    vertical-align: middle;
+}
+
+.name {
+    margin: 20px;
+    padding-bottom: 2px;
+    width: auto;
+    height: auto;
+    font-size: 50px;
+    font-family: Verdana, sans-serif;
+}
+
+.name span {
+    font-size: 20px;
+    color: rgb(167, 167, 167);
+}
+
+.buttonbar {
+    flex-direction: row;
+    margin-right: 20px;
+    padding-top: 7px;
+}
+
+.buttonbar ul {
+    list-style-type: none;
+    vertical-align: middle;
+}
+
+.buttonspace {
+    float: left;
+    margin-right: 20px;
+}
+
+.button {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: beige;
+    border-width: 2px;
+    border-style: solid;
+    text-align: center;
+    background-color: #31325a;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: azure;
+}
+
+.profile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.profilepic {
+
+    border-radius: 100%;
+    border-color: rgb(87, 87, 87);
+    border-width: 4px;
+    border-style: solid;
+}
+
+.info {
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 1000px;
+    text-align: center;
+    border-radius: 10px;
+    border-style: solid;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.divider {
+    text-align: center;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.dividerimg {
+    width: 30%;
+    text-align: center;
+    margin: auto;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    background-color: rgba(212, 212, 212, 1.0);
+    text-align: center;
+    width: 32%;
+    padding: 5px;
+    margin: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 25px;
+}
+
+.description {
+    color: black;
+}
+
+.screenshot {
+    width: 98%;
+    border-color: rgba(33, 33, 33, 1.0);
+    border-width: 4px;
+    border-style: solid;
+}
+
+.card h3 {
+    font-size: 35px;
+    margin: 0;
+    width: auto;
+    color: black;
+}
+
+.technologies {
+    color: rgb(80, 80, 80);
+}
+
+@media only screen and (max-width: 1100px) {
+    .header {
+        background-color: rgb(33, 33, 33);
+
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        vertical-align: middle;
+    }
+
+    .name {
+        margin: 20px;
+        padding-bottom: 2px;
+        width: auto;
+        height: auto;
+        font-size: 50px;
+        font-family: Verdana, sans-serif;
+    }
+
+    .name span {
+        font-size: 20px;
+        color: rgb(167, 167, 167);
+    }
+
+    .buttonbar {
+        margin-right: 20px;
+        padding-top: 7px;
+    }
+
+    .buttonbar ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+    }
+
+    .buttonspace {
+        margin-right: 20px;
+    }
+
+    .button {
+        padding-left: 20px;
+        padding-right: 20px;
+        border-color: beige;
+        border-width: 2px;
+        border-style: solid;
+        text-align: center;
+        background-color: #31325a;
+        font-weight: bold;
+    }
+
+    .info {
+        width: 90%;
+    }
+
+    .card {
+        background-color: rgba(212, 212, 212, 1.0);
+        text-align: center;
+        width: 95%;
+        padding: 5px;
+        margin: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 25px;
+    }
+}
