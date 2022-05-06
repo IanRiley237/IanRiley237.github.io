@@ -8,11 +8,12 @@ html {
   background: linear-gradient(rgb(60, 55, 126), rgb(0, 0, 0, 1));
 }
 
-/*
+
 body {
-    opacity: 0.5;
-    background: linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 1));
-}*/
+  margin:auto;
+  width: min(1200px, 100%);
+  
+}
 
 .header {
   background-color: rgb(33, 33, 33);
@@ -44,14 +45,16 @@ body {
   padding-top: 7px;
 }
 
-.buttonbar ul {
+.button-bar ul {
   list-style-type: none;
   vertical-align: middle;
 }
 
-.buttonspace {
+.button-space {
   float: left;
   margin-right: 20px;
+  margin-top: 4px;
+  margin-bottom: 8px;
 }
 
 .button {
@@ -71,17 +74,35 @@ a {
 }
 
 .profile {
+  font-size: 18px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   margin-top: 25px;
 }
 
-.profilepic {
+.profile-pic-container {
+}
+
+.profile-pic {
+  height: 13em;
+  width: 13em;
+
   border-radius: 100%;
   border-color: rgb(87, 87, 87);
   border-width: 4px;
   border-style: solid;
+
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.info-container {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 860px;
 }
 
 .info {
@@ -89,9 +110,10 @@ a {
   margin-top: 15px;
   margin-bottom: 15px;
   padding: 10px;
-  width: 1000px;
-  text-align: center;
-  font-size: 2vw;
+  
+  text-align: left;
+  font-size: 18px;
+
   border-radius: 10px;
   border-style: solid;
   background-color: rgb(0, 0, 0, 0.5);
@@ -104,8 +126,9 @@ a {
   padding-bottom: 30px;
 }
 
-.dividerimg {
-  width: 30%;
+.divider-img {
+  width: 70%;
+  max-width: 800px;
   text-align: center;
   margin: auto;
 }
@@ -150,7 +173,7 @@ a {
   color: rgb(80, 80, 80);
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 735px) {
   .header {
     background-color: rgb(33, 33, 33);
 
@@ -175,18 +198,18 @@ a {
     color: rgb(167, 167, 167);
   }
 
-  .buttonbar {
+  .button-bar {
     margin-right: 20px;
     padding-top: 7px;
   }
 
-  .buttonbar ul {
+  .button-bar ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
   }
 
-  .buttonspace {
+  .button-space {
     margin-right: 20px;
   }
 
@@ -201,9 +224,32 @@ a {
     font-weight: bold;
   }
 
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic-container {
+  }  
+
+  .profile-pic {
+    height: 30vw;
+    width: 30vw;
+    
+    transform: translateY(0%);
+  }
+
+  .info-container {
+    margin-left: 0;
+    min-width: auto;
+    width: 100%;
+  }
+
   .info {
+    position: relative;
     width: 90%;
-    font-size: 1.5em;
+    font-size: 4.5vw;
+    text-align: center;
   }
 
   .card {
