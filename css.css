@@ -1,3 +1,7 @@
+:root {
+  --deep-purple: rgb(60, 55, 126);
+}
+
 * {
   color: white;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", "Tahoma",
@@ -5,7 +9,7 @@
 }
 
 html {
-  background: linear-gradient(rgb(60, 55, 126), rgb(0, 0, 0, 1));
+  background: linear-gradient(lightgrey, grey);
 }
 
 
@@ -16,8 +20,8 @@ body {
 }
 
 .header {
-  background-color: rgb(33, 33, 33);
-
+  background-color: var(--deep-purple);
+  
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -141,7 +145,7 @@ a {
 }
 
 .card {
-  background-color: rgba(212, 212, 212, 1);
+  background-color: lightgray;
   text-align: center;
   width: 48%;
   padding: 5px;
@@ -170,7 +174,7 @@ a {
 }
 
 .technologies {
-  color: rgb(80, 80, 80);
+  color: grey;
 }
 
 @media only screen and (max-width: 735px) {
@@ -195,7 +199,7 @@ a {
 
   .name span {
     font-size: 20px;
-    color: rgb(167, 167, 167);
+    color: #a7a7a7;
   }
 
   .button-bar {
@@ -253,7 +257,7 @@ a {
   }
 
   .card {
-    background-color: rgba(212, 212, 212, 1);
+    background-color: lightgray;
     text-align: center;
     width: 95%;
     padding: 5px;
