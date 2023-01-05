@@ -27,6 +27,9 @@ body {
   justify-content: space-between;
 
   vertical-align: middle;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .name {
