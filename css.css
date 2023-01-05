@@ -16,15 +16,14 @@ html {
 body {
   margin:auto;
   width: min(1200px, 100%);
-  
 }
 
 .header {
   background-color: var(--deep-purple);
   
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
 
   vertical-align: middle;
   position: sticky;
@@ -34,6 +33,7 @@ body {
 
 .name {
   margin: 20px;
+  margin-right: 0px;
   padding-bottom: 2px;
   width: auto;
   height: auto;
@@ -46,15 +46,22 @@ body {
   color: rgb(167, 167, 167);
 }
 
-.buttonbar {
+.social-icon-container {
+  margin: auto;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.button-bar {
+  justify-self: right;
   flex-direction: row;
-  margin-right: 20px;
-  padding-top: 7px;
 }
 
 .button-bar ul {
   list-style-type: none;
-  vertical-align: middle;
 }
 
 .button-space {
@@ -182,9 +189,6 @@ a {
 
 @media only screen and (max-width: 735px) {
   .header {
-    background-color: rgb(33, 33, 33);
-
-    width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
