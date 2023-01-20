@@ -193,6 +193,7 @@ a {
     display: flex;
     flex-direction: column;
     vertical-align: middle;
+    position: relative;
   }
 
   .name {
