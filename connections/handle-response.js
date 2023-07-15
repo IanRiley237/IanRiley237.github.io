@@ -5,7 +5,7 @@ function sendRequest() {
     const queryString = window.location.search;
     console.log(queryString);
     const urlParams = new URLSearchParams(queryString);
-    const code = urlParams.get('code')
+    const code = urlParams.get('access_token')
     const scope = urlParams.get('scope')
     const state = urlParams.get('state')
     console.log(code);
@@ -20,7 +20,8 @@ function sendRequest() {
         headers: {
           'Content-Type': 'text/plain',
         },
-        body: code,
+        token: code,
+        state: state,
       })
     .then(response => {
     if (response.ok) {
