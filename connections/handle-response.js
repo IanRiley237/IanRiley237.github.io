@@ -3,16 +3,13 @@ function sendRequest() {
     statusNote.innerHTML = 'Processing...';
 
     const queryString = document.location.hash.substring(1);
-    console.log(queryString);
     const urlParams = new URLSearchParams(queryString);
     const token = urlParams.get('access_token');
     const scope = urlParams.get('scope');
     const state = urlParams.get('state');
-    console.log(token);
-    console.log(scope);
-    console.log(state);
-
     
+    response = token + '\r\n' + scope + '\r\n' + state
+
     //mc.dougdougw.com:443
 
     fetch('http://localhost:443?', {
@@ -20,8 +17,7 @@ function sendRequest() {
         headers: {
           'Content-Type': 'text/plain',
         },
-        token: token,
-        state: state,
+        body: response
       })
     .then(response => {
     if (response.ok) {
