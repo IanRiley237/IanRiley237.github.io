@@ -2,13 +2,13 @@ function sendRequest() {
     var statusNote = document.getElementById('status');
     statusNote.innerHTML = 'Processing...';
 
-    const queryString = window.location.search;
+    const queryString = document.location.hash.substring(1);
     console.log(queryString);
     const urlParams = new URLSearchParams(queryString);
-    const code = urlParams.get('access_token')
-    const scope = urlParams.get('scope')
-    const state = urlParams.get('state')
-    console.log(code);
+    const token = urlParams.get('access_token');
+    const scope = urlParams.get('scope');
+    const state = urlParams.get('state');
+    console.log(token);
     console.log(scope);
     console.log(state);
 
@@ -20,7 +20,7 @@ function sendRequest() {
         headers: {
           'Content-Type': 'text/plain',
         },
-        token: code,
+        token: token,
         state: state,
       })
     .then(response => {
